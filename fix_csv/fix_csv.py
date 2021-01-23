@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('original_cars')
 parser.add_argument('fixed_cars')
-parser.add_argument('--in-delimiter', dest="delimiter")
+parser.add_argument('--in-delimiter', default=True)
 parser.add_argument('--in-quote', dest="quotechar")
 
 parsed = parser.parse_args()
