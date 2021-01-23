@@ -15,5 +15,7 @@ class suppress(ContextDecorator):
         self.exception = value
         self.traceback = traceback
 
+        # could have simply checked the type of value instead. This would avoid the issubclass
+        # also it would be cleaner to just directly return this expression
         if isinstance(type, self.exception_tuple) or issubclass(type, self.exception_tuple):
             return True
