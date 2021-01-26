@@ -14,6 +14,7 @@ class FuzzyString:
         return self.word
 
     def __repr__(self):
+        # should have just called repr(self.word)
         return f'\'{self.word}\''
 
     def __lt__(self, other):
